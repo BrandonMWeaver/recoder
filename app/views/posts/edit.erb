@@ -1,0 +1,8 @@
+<form method="POST" action="/posts/<%=@post.id%>/edit">
+	<input type="hidden" name="_method" value="PATCH">
+	<label for="post[code_snippet]">code snippet</label>
+	<textarea name="post[code_snippet]"><%=@post.code_snippet%></textarea>
+	<label for="post[description]">description</label>
+	<textarea name="post[description]"><%=@post.description%></textarea>
+	<input type="submit" value="Update">
+</form>

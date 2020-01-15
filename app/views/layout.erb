@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Recoder</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/layout.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/content.css">
+	</head>
+
+	<body>
+
+		<header>
+			<h1>Recoder</h1>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<% unless logged_in? %>
+					<li><a href="/register">Register</a></li>
+					<li><a href="/login">Log In</a></li>
+				<% else %>
+					<li><a href="/users/<%=current_user.slug%>">Profile</a></li>
+					<li><a href="/logout">Log Out</a></li>
+					<li class="account"><a href="/users/<%=current_user.slug%>/account">Account</a></li>
+					<li class="account"><a href="/posts/new">Create post</a></li>
+				<% end %>
+			</ul>
+		</header>
+
+		<%=yield%>
+
+	</body>
+
+</html>

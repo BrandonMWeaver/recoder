@@ -1,0 +1,42 @@
+.profile {
+	overflow: hidden;
+}
+
+.profile > h2 {
+	margin: 10px;
+	text-align: center;
+	font-family: "Press Start 2P", cursive;
+	color: #ffff00;
+	text-shadow: 2.5px 2.5px 5px #000;
+}
+
+.post {
+	margin: 5px auto;
+	width: 75%;
+	max-width: 75%;
+	border: #000;
+	border-style: solid;
+	background: linear-gradient(#323232, #646464, #323232, transparent), linear-gradient(#646464, #000);
+}
+
+.post > .code-snippet {
+	margin: 5px;
+	padding: 5px;
+	font-family: "Courier New", Courier, monospace;
+	color: #00ff00;
+	background-color: #323232;
+}
+
+.post > .description {
+	margin: 5px;
+	padding: 5px;
+	color: #fff;
+	background-color: #646464;
+}
+
+.description > a {
+	float: right;
+	text-align: center;
+	text-decoration: none;
+	color: #ffff00;
+}

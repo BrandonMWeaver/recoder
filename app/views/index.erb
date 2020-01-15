@@ -1,0 +1,9 @@
+<div class="profile">
+	<h2>Recent...</h2>
+	<% Post.all.reverse.take(10).each do |post| %>
+		<div class="post">
+			<p class="code-snippet"><%=post.code_snippet%></p>
+			<p class="description"><%=post.description%><a href="/users/<%=post.user.slug%>"><%=post.user.username%></a></p>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,8 @@
+<form method="POST" action="/users/<%=current_user.slug%>/account">
+	<input id="hidden" type="hidden" name="_method" value="PATCH">
+	<label for="username">username</label>
+	<input type="text" name="user[username]" value="<%=current_user.username%>">
+	<label for="password">password</label>
+	<input type="password" name="user[password]">
+	<input type="submit" value="Register">
+</form>

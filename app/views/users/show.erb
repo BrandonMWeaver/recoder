@@ -1,0 +1,17 @@
+<div class="profile">
+	<% if @user %>
+		<h2><%=@user.username%></h2>
+		<% @user.posts.reverse.each do |post| %>
+			<div class="post">
+				<p class="code-snippet"><%=post.code_snippet%></p>
+				<p class="description"><%=post.description%>
+				<% if @user == current_user %>
+					<a href="/posts/<%=post.id%>/edit">Edit</a>
+				<% end %>
+				</p>
+			</div>
+		<% end %>
+	<% else %>
+		<h2><%=params[:slug]%> not found</h2>
+	<% end %>
+</div>

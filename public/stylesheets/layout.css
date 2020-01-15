@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+
+body {
+	margin: 0;
+	background-color: #646464;
+}
+
+header {
+	overflow: hidden;
+	background: #64967d;
+}
+
+header > h1 {
+	margin: 10px;
+	text-align: center;
+	font-family: "Press Start 2P", cursive;
+	color: #fff;
+	text-shadow: 2.5px 2.5px 5px #000;
+}
+
+header > ul {
+	margin: 0;
+	padding: 5px 0px;
+	list-style-type: none;
+	background: linear-gradient(#323232, #646464, #323232, transparent), linear-gradient(#646464, #000);
+}
+
+header > ul > li {
+	display: inline;
+}
+
+header > ul > .account {
+	float: right;
+}
+
+header > ul > li > a {
+	margin: 0px 0px 0px 5px;
+	text-align: center;
+	font-family: "Lobster", cursive;
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 2.5px 2.5px 5px #000;
+}
+
+header > ul > .account > a {
+	margin: 0px 5px 0px 0px;
+}
+
+header > ul > li > a:hover {
+	color: #64967d;
+}
