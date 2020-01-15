@@ -40,3 +40,22 @@
 	text-decoration: none;
 	color: #ffff00;
 }
+
+.form-container {
+	margin: 5px auto;
+	width: 200px;
+	max-width: 200px;
+	text-align: center;
+	border: #000;
+	border-style: solid;
+	color: #fff;
+	background: linear-gradient(#323232, #646464, #323232, transparent), linear-gradient(#646464, #000);
+}
+
+.form-container > form {
+	display: inline-block;
+}
+
+.form-container > form > textarea {
+	height: 200px;
+}
