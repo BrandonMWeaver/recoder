@@ -1,10 +1,10 @@
 <div class="form-container">
 	<form method="POST" action="/posts/<%=@post.id%>/edit">
 		<input type="hidden" name="_method" value="PATCH">
-		<label for="post[code_snippet]">code snippet</label>
-		<textarea name="post[code_snippet]"><%=@post.code_snippet%></textarea>
-		<label for="post[description]">description</label>
-		<textarea name="post[description]"><%=@post.description%></textarea>
+		<label for="post[code_snippet]">code snippet</label><br>
+		<textarea name="post[code_snippet]"><%=@post.code_snippet%></textarea><br>
+		<label for="post[description]">description</label><br>
+		<textarea name="post[description]"><%=@post.description%></textarea><br>
 		<input type="submit" value="Update">
 	</form>
 </div>

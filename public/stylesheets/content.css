@@ -43,8 +43,9 @@
 
 .form-container {
 	margin: 5px auto;
-	width: 200px;
-	max-width: 200px;
+	padding: 5px;
+	width: 400px;
+	max-width: 400px;
 	text-align: center;
 	border: #000;
 	border-style: solid;
@@ -57,5 +58,6 @@
 }
 
 .form-container > form > textarea {
+	width: 395px;
 	height: 200px;
 }
