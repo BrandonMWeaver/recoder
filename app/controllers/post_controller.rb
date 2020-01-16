@@ -33,4 +33,10 @@ class PostController < ApplicationController
 		redirect "/users/#{current_user.slug}"
 	end
 
+	delete "/posts/:id/edit" do
+		post = Post.find(params[:id])
+		post.delete
+		redirect "/users/#{current_user.slug}"
+	end
+
 end

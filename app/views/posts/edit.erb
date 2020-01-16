@@ -7,4 +7,9 @@
 		<textarea name="post[description]"><%=@post.description%></textarea><br>
 		<input type="submit" value="Update">
 	</form>
+	<form method="POST" action="/posts/<%=@post.id%>/edit">
+		<input type="hidden" name="_method" value="DELETE">
+		<label>Delete this post</label><br>
+		<input type="submit" value="Delete">
+	</form>
 </div>
