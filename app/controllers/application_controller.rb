@@ -28,6 +28,8 @@ class ApplicationController < Sinatra::Base
 			session[:user_id] = user.id
 			redirect "/users/#{user.slug}"
 		end
+		flash[:notice] = "username/password must not be blank"
+		redirect "/register"
 	end
 
 	get "/login" do
