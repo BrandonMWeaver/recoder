@@ -8,6 +8,7 @@ class ApplicationController < Sinatra::Base
 	end
 
 	get '/' do
+		binding.pry
 		erb :index
 	end
 
@@ -16,7 +17,7 @@ class ApplicationController < Sinatra::Base
 	end
 	
 	post "/register" do
-		if User.find_by(username: params[:username])
+		if User.find_by(username: params[:username]) || User.find_by_slug(params[:username])
 			redirect "/register"
 		elsif !params.values.any? { |value| value.blank? }
 			user = User.create(params)
@@ -54,5 +55,5 @@ class ApplicationController < Sinatra::Base
 		end
 
 	end
-
+	
 end
