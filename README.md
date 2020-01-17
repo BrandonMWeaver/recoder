@@ -2,7 +2,7 @@
 
 execute:
 
-  $ bundle
+	$ bundle
 
 then execute:
 
