@@ -22,4 +22,13 @@ class UserController < ApplicationController
 		redirect "/users/#{current_user.slug}"
 	end
 
+	delete "/users/:slug/account" do
+		user = current_user
+		user.posts.each do |post|
+			post.delete
+		end
+		user.delete
+		redirect "/logout"
+	end
+
 end

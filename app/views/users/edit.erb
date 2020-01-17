@@ -8,3 +8,10 @@
 		<input type="submit" value="Update">
 	</form>
 </div>
+<div class="form-container">
+	<form method="POST" action="/users/<%=current_user.slug%>/account">
+		<input type="hidden" name="_method" value="DELETE">
+		<label>Delete this account</label><br>
+		<input type="submit" value="Delete">
+	</form>
+</div>
