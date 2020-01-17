@@ -8,7 +8,6 @@ class ApplicationController < Sinatra::Base
 	end
 
 	get '/' do
-		binding.pry
 		erb :index
 	end
 
@@ -55,5 +54,5 @@ class ApplicationController < Sinatra::Base
 		end
 
 	end
-	
+
 end
