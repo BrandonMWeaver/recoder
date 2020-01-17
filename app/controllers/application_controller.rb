@@ -1,4 +1,8 @@
+require "rack-flash"
+
 class ApplicationController < Sinatra::Base
+
+	use Rack::Flash
 
 	configure do
 		set :public_folder, "public"
@@ -17,6 +21,7 @@ class ApplicationController < Sinatra::Base
 	
 	post "/register" do
 		if User.find_by(username: params[:username]) || User.find_by_slug(params[:username])
+			flash[:notice] = "the username \"#{params[:username]}\" is unavailable"
 			redirect "/register"
 		elsif !params.values.any? { |value| value.blank? }
 			user = User.create(params)
@@ -35,6 +40,7 @@ class ApplicationController < Sinatra::Base
 			session[:user_id] = user.id
 			redirect "/users/#{user.slug}"
 		end
+		flash[:notice] = "invalid username and/or password"
 		redirect "/login"
 	end
 

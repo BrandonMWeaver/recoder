@@ -2,6 +2,7 @@ class PostController < ApplicationController
 
 	get "/posts/new" do
 		if !logged_in?
+			flash[:notice] = "You must be logged in"
 			redirect "/login"
 		end
 		erb :"/posts/new"
@@ -20,6 +21,11 @@ class PostController < ApplicationController
 		@post = Post.find(params[:id])
 		@post.code_snippet.gsub!("<br>", "\n")
 		unless @post.user == current_user
+			if logged_in?
+				flash[:notice] = "post #{params[:id]} does not belong to this account"
+			else
+				flash[:notice] = "You must be logged in"
+			end
 			redirect "/login"
 		end
 		erb :"/posts/edit"

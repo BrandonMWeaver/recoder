@@ -9,6 +9,11 @@ class UserController < ApplicationController
 		if logged_in? && current_user.slug == params[:slug]
 			erb :"users/edit"
 		else
+			if logged_in?
+				flash[:notice] = "The account does not belong to you"
+			else
+				flash[:notice] = "You must be logged in"
+			end
 			redirect "/login"
 		end
 	end
