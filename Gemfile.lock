@@ -24,7 +24,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    rack (2.1.1)
+    rack (2.2.3)
     rack-flash3 (1.0.5)
       rack
     rack-protection (2.0.8.1)
@@ -48,6 +48,7 @@ GEM
     zeitwerk (2.2.2)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
